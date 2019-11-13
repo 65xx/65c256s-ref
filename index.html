@@ -46,7 +46,7 @@ DAMAGE.
 <!--}}}-->
 
 <!--PRE-HEAD-END-->
-<title> 65xxx - still computing </title>
+<title> 65c256s - REFERENCE </title>
 <style id="styleArea" type="text/css">
 #saveTest {display:none;}
 #messageArea {display:none;}
@@ -575,6 +575,13 @@ noscript {display:none;} /* Fixes a feature in Firefox 1.5.0.2 where print previ
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
+<div title="About" creator="YourName" modifier="enso" created="201310031859" modified="201911130131" changecount="7">
+<pre>This is a TiddlyWiki (a self-contained document) containing a hypertext reference for the WDC 65c256s chip.
+
+If you wish to help, or need more information, please contact    enso  at   apple2.x10.mx  (substitute @ for '  at  ', of course)
+
+I am also active on the 6502 forums, especially 'Programmable Logic' at [[6502.org|http://forum.6502.org]]</pre>
+</div>
 <div title="BCR7 and BE bus control" creator="enso" modifier="enso" created="201911120029" modified="201911120038" changecount="10">
 <pre>|!~BCR7|!BE|!ROM|!Processor|
 |0|0|Internal|External|
@@ -595,13 +602,6 @@ noscript {display:none;} /* Fixes a feature in Firefox 1.5.0.2 where print previ
 
 
 </pre>
-</div>
-<div title="Contact" creator="YourName" modifier="enso" created="201310031859" modified="201507082118" changecount="5">
-<pre>Please email:
-
-enso  at   apple2.x10.mx  (substitute @ for '  at  ')
-
-I am also active on the 6502 forums, especially 'Programmable Logic' at [[6502.org|http://forum.6502.org]]</pre>
 </div>
 <div title="Control Registers" creator="enso" modifier="enso" created="201911111901" modified="201911122358" changecount="63">
 <pre>Control and Status registers: &quot;&quot;&quot;$DF40 - $DF49&quot;&quot;&quot;.   Reserved memory: &quot;&quot;&quot;$DF4A - $DF4F&quot;&quot;&quot;
@@ -741,31 +741,31 @@ For Data Direction registers, 0 means INPUT while 1 means OUTPUT.  Reading a ~PD
 
 Also: [[Interrupt Vectors - Emulated]]</pre>
 </div>
-<div title="MainMenu" creator="Enso" modifier="enso" created="201308271743" modified="201911062139" changecount="22">
+<div title="MainMenu" creator="Enso" modifier="enso" created="201308271743" modified="201911130129" changecount="23">
 <pre>[[Latest|Minimalism - is it possible?]]
 [[Apple ][ site|http://apple2.x10.mx/index.html]]
 [[CHOCHI site|http://apple2.x10.mx/CHOCHI/index.html]]
-[[Contact]]
+[[About]]
 </pre>
 </div>
-<div title="Memory Map" creator="enso" modifier="enso" created="201911111847" modified="201911130104" changecount="52">
+<div title="Memory Map" creator="enso" modifier="enso" created="201911111847" modified="201911130112" changecount="58">
 <pre>|!Start|!End|!Size|!Description|!CS|!Pin|
-|&quot;&quot;&quot;$C00000&quot;&quot;&quot;|&quot;&quot;&quot;$FFFFFF&quot;&quot;&quot;| &quot;&quot;&quot;4MB&quot;&quot;&quot;|User 4MB Memory|CS7B||
-|&quot;&quot;&quot;$400000&quot;&quot;&quot;|&quot;&quot;&quot;$BFFFFF&quot;&quot;&quot;| &quot;&quot;&quot;8MB&quot;&quot;&quot;|User 8MB Memory|CS6B||
-|&quot;&quot;&quot;$000000&quot;&quot;&quot;|&quot;&quot;&quot;$3FFFFF&quot;&quot;&quot;| &quot;&quot;&quot;4MB&quot;&quot;&quot;|User 4MB|CS5B||
+|&quot;&quot;&quot;$C00000&quot;&quot;&quot;|&quot;&quot;&quot;$FFFFFF&quot;&quot;&quot;| &quot;&quot;&quot;4MB&quot;&quot;&quot;|User 4MB Memory|CS7B|P77 (57)|
+|&quot;&quot;&quot;$400000&quot;&quot;&quot;|&quot;&quot;&quot;$BFFFFF&quot;&quot;&quot;| &quot;&quot;&quot;8MB&quot;&quot;&quot;|User 8MB Memory|CS6B|P76 (56)|
+|&quot;&quot;&quot;$000000&quot;&quot;&quot;|&quot;&quot;&quot;$3FFFFF&quot;&quot;&quot;| &quot;&quot;&quot;4MB&quot;&quot;&quot;|User 4MB|CS5B|P75 (55)|
 |&quot;&quot;&quot;$FF00&quot;&quot;&quot;|&quot;&quot;&quot;$FFFF&quot;&quot;&quot;| &quot;&quot;&quot;256&quot;&quot;&quot;|[[Interrupt Vectors - Native]]||
-|&quot;&quot;&quot;$E000&quot;&quot;&quot;|&quot;&quot;&quot;$FEFF&quot;&quot;&quot;| &quot;&quot;&quot;7936&quot;&quot;&quot;|&quot;&quot;&quot;MENSCH Monitor ROM (1)&quot;&quot;&quot;|CS4B|
-|&quot;&quot;&quot;$DFC0&quot;&quot;&quot;|&quot;&quot;&quot;$DFCF&quot;&quot;&quot;| &quot;&quot;&quot;64&quot;&quot;&quot;|&quot;&quot;&quot;PIB SRAM Expansion &quot;&quot;&quot;|CS1B|[[P71]]|
+|&quot;&quot;&quot;$E000&quot;&quot;&quot;|&quot;&quot;&quot;$FEFF&quot;&quot;&quot;| &quot;&quot;&quot;7936&quot;&quot;&quot;|&quot;&quot;&quot;MENSCH Monitor ROM (1)&quot;&quot;&quot;|CS4B|P74 (54)|
+|&quot;&quot;&quot;$DFC0&quot;&quot;&quot;|&quot;&quot;&quot;$DFCF&quot;&quot;&quot;| &quot;&quot;&quot;64&quot;&quot;&quot;|&quot;&quot;&quot;PIB SRAM Expansion &quot;&quot;&quot;|CS1B|P71 (51)|
 |&quot;&quot;&quot;$DF80&quot;&quot;&quot;|&quot;&quot;&quot;$DFBF&quot;&quot;&quot;| &quot;&quot;&quot;64&quot;&quot;&quot;|&quot;&quot;&quot;On-chip SRAM&quot;&quot;&quot;||
 |&quot;&quot;&quot;$DF78&quot;&quot;&quot;|&quot;&quot;&quot;$DF7F&quot;&quot;&quot;| &quot;&quot;&quot;8&quot;&quot;&quot;|[[Parallel Registers]]|
 |&quot;&quot;&quot;$DF70&quot;&quot;&quot;|&quot;&quot;&quot;$DF77&quot;&quot;&quot;| &quot;&quot;&quot;8&quot;&quot;&quot;|[[UART Registers]]|
 |&quot;&quot;&quot;$DF50&quot;&quot;&quot;|&quot;&quot;&quot;$DF6F&quot;&quot;&quot;| &quot;&quot;&quot;32&quot;&quot;&quot;|[[Timer Registers]]|
 |&quot;&quot;&quot;$DF40&quot;&quot;&quot;|&quot;&quot;&quot;$DF4F&quot;&quot;&quot;| &quot;&quot;&quot;16&quot;&quot;&quot;|[[Control Registers]]|
 |&quot;&quot;&quot;$DF20&quot;&quot;&quot;|&quot;&quot;&quot;$DF27&quot;&quot;&quot;| &quot;&quot;&quot;8&quot;&quot;&quot;|[[IO Registers]]|
-|&quot;&quot;&quot;$DF00&quot;&quot;&quot;|&quot;&quot;&quot;$DF1F&quot;&quot;&quot;| &quot;&quot;&quot;32&quot;&quot;&quot;|&quot;&quot;&quot;BCR=1? SRAM&quot;&quot;&quot;|CS0B|[[P70]]|
+|&quot;&quot;&quot;$DF00&quot;&quot;&quot;|&quot;&quot;&quot;$DF1F&quot;&quot;&quot;| &quot;&quot;&quot;32&quot;&quot;&quot;|&quot;&quot;&quot;BCR=1? SRAM&quot;&quot;&quot;|CS0B|P70 (50)|
 |~|&quot;&quot;&quot;$DF07&quot;&quot;&quot;| 8|BCR=0? [[IO Registers]]||
-|&quot;&quot;&quot;$8000&quot;&quot;&quot;|&quot;&quot;&quot;$DEFF&quot;&quot;&quot;| 24,320 |External Flash|CS4B|
-|&quot;&quot;&quot;$0200&quot;&quot;&quot;|&quot;&quot;&quot;$7FFF&quot;&quot;&quot;| 32,256 |External SRAM (3)|CS3B|
+|&quot;&quot;&quot;$8000&quot;&quot;&quot;|&quot;&quot;&quot;$DEFF&quot;&quot;&quot;| 24,320 |External Flash|CS4B|P74 (54)|
+|&quot;&quot;&quot;$0200&quot;&quot;&quot;|&quot;&quot;&quot;$7FFF&quot;&quot;&quot;| 32,256 |External SRAM (3)|CS3B|P73 (53)|
 |&quot;&quot;&quot;$0100&quot;&quot;&quot;|&quot;&quot;&quot;$01FF&quot;&quot;&quot;| &quot;&quot;&quot;256&quot;&quot;&quot;|&quot;&quot;&quot;65C02 Page One &quot;&quot;&quot;|
 |&quot;&quot;&quot;$0000&quot;&quot;&quot;|&quot;&quot;&quot;$00FF&quot;&quot;&quot;| &quot;&quot;&quot;256&quot;&quot;&quot;|&quot;&quot;&quot;65C02 Page Zero&quot;&quot;&quot;|
 
@@ -820,11 +820,11 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 
 </pre>
 </div>
-<div title="SiteSubtitle" creator="Enso" modifier="enso" created="201308271742" modified="201911111858" changecount="4">
-<pre>still computing</pre>
+<div title="SiteSubtitle" creator="Enso" modifier="enso" created="201308271742" modified="201911130114" changecount="6">
+<pre>REFERENCE</pre>
 </div>
-<div title="SiteTitle" creator="Enso" modifier="enso" created="201308271742" modified="201911111857" changecount="5">
-<pre>65xxx
+<div title="SiteTitle" creator="Enso" modifier="enso" created="201308271742" modified="201911130113" changecount="6">
+<pre>65c256s
 </pre>
 </div>
 <div title="System Speed Control Register" creator="enso" modifier="enso" created="201911120217" modified="201911130049" changecount="4">

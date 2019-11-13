@@ -46,7 +46,7 @@ DAMAGE.
 <!--}}}-->
 
 <!--PRE-HEAD-END-->
-<title> 65c256s - REFERENCE </title>
+<title> w65c265s - REFERENCE </title>
 <style id="styleArea" type="text/css">
 #saveTest {display:none;}
 #messageArea {display:none;}
@@ -607,7 +607,7 @@ noscript {display:none;} /* Fixes a feature in Firefox 1.5.0.2 where print previ
 |1|1|External|Internal|</pre>
 </div>
 <div title="Bus Control Register" creator="enso" modifier="enso" created="201911120011" modified="201911120213" changecount="27">
-<pre>Bus [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF40&quot;&quot;&quot;
+<pre>Bus [[Control Register|ControlRegisters]] at &quot;&quot;&quot;$DF40&quot;&quot;&quot;
 |!~DF40|Name|
 |7|~BCR7|Ext. ROM||BE enables internal CPU|
 |6|~BCR6|NMIB|P40|Enable; Level-sensitive, mutually-exclusive |
@@ -633,20 +633,20 @@ enso  at   apple2.x10.mx  (substitute @ for '  at  ')
 
 I am also active on the 6502 forums, especially 'Programmable Logic' at [[6502.org|http://forum.6502.org]]</pre>
 </div>
-<div title="Control.Registers" creator="enso" modifier="enso" created="201911111901" modified="201911130320" changecount="64">
+<div title="ControlRegisters" creator="enso" modifier="enso" created="201911111901" modified="201911130320" changecount="64">
 <pre>Control and Status registers: &quot;&quot;&quot;$DF40 - $DF49&quot;&quot;&quot;.   Reserved memory: &quot;&quot;&quot;$DF4A - $DF4F&quot;&quot;&quot;
 ||| |!7|!6|!5|!4|!3|!2|!1|!0|
-|[[$DF49|UART Interrupt Enable Register]|[[UART Interrupt Enable Register]]|[[UIER|UART Interrupt Enable Register]]|[[UART Interrupt Enable Register]]|~U3TE|~U3RE|~U2TE|~U2RE|~U1TE|~U1RE|~U0TE|~U0RE|
+|[[$DF49|UART Interrupt Enable Register]]|[[UIER|UART Interrupt Enable Register]]|[[UART Interrupt Enable Register]]|~U3TE|~U3RE|~U2TE|~U2RE|~U1TE|~U1RE|~U0TE|~U0RE|
 |[[$DF48|UART Interrupt Flag Register]]|[[UIFR|UART Interrupt Flag Register]]|[[UART Interrupt Flag Register]]|~IRQATx|~U3RF|~U2TF|~U2RF|~U1RF|~U1TF|~U0RF|~U0TF|
 |[[$DF47|Edge Interrupt Enable Register]]|[[EIER|Edge Interrupt Enable Register]]|[[Edge Interrupt Enable Register]]|IRQBE|PIBE|NE66E|NE64E|PWME|PE60E|NE57E|PE56E|
 |[[$DF46|Timer Interrupt Enable Register]]|[[TIER|Timer Interrupt Enable Register]]|[[Timer Interrupt Enable Register]]|TIER7|TIER6|TIER5|TIER4|TIER3|TIER2|TIER1|TIER0|
 |[[$DF45|Edge Interrupt Flag Register]]|[[EIFR|Edge Interrupt Flag Register]]|[[Edge Interrupt Flag Register]]|IRQB|PIB|NE66|NE64|PWM|PE60|NE57|PE56|
 |[[$DF44|Timer Interrupt Flag Register]]|[[TIFR|Timer Interrupt Flag Register]]|[[Timer Interrupt Flag Register]]|TIFR7|TIFR6|TIFR5|TIFR4|TIFR3|TIFR2|TIFR1|TIFR0|
 |[[$DF43|Timer Enable Register]]|[[TER|Timer Enable Register]]|[[Timer Enable Register]]|TER7|TER6|TER5|TER4|TER3|TER2|TER1|TER0|
-|[[$DF42|Timer Control Register|Timer.ControlRegister]]|[[TCR|Timer.Control.Register]]|[[Timer Control Register|Timer.Control.Register]]|TCR7|TCR6|TCR5|TCR4|TCR3|TCR2|TCR1|TCR0|
+|[[$DF42|Timer.Control.Register]]|[[TCR|Timer.Control.Register]]|[[Timer Control Register|Timer.Control.Register]]|TCR7|TCR6|TCR5|TCR4|TCR3|TCR2|TCR1|TCR0|
 |[[$DF41|System Speed Control Register]]|[[SSCR|System Speed Control Register]]|[[System Speed Control Register]]|SSCR7|SSCR6|SSCR5|SSCR4|SSCR3|SSCR2|SSCR1|SSCR0|
 |[[$DF40|Bus Control Register]]|[[BCR|Bus Control Register]]|[[Bus Control Register]]|BCR7|BCR6|BCR5|BCR4|BCR3|BCR2|BCR1|BCR0|
-</pre>
+</pre>															
 </div>
 <div title="DefaultTiddlers" creator="Enso" modifier="enso" created="201308272129" modified="201911130108" changecount="15">
 <pre>[[Memory Map]]
@@ -676,7 +676,7 @@ I am also active on the 6502 forums, especially 'Programmable Logic' at [[6502.o
 |0|PE56||
 </pre>
 </div>
-<div title="IO.Registers" creator="enso" modifier="enso" created="201911122343" modified="201911130305" changecount="13">
+<div title="IORegisters" creator="enso" modifier="enso" created="201911122343" modified="201911130305" changecount="13">
 <pre>|!Addr|!Name|!Function|!reset|
 |[[$DF27|PCS]]|[[PCS]]|[[Port 7|Ports]] [[Chip Select|Chip.Selects]]|&quot;&quot;&quot;$00&quot;&quot;&quot;|
 |[[$DF26|PDD6]]|[[PDD6]]|[[Port 6|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
@@ -789,11 +789,11 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 |&quot;&quot;&quot;$DF80&quot;&quot;&quot;|&quot;&quot;&quot;$DFBF&quot;&quot;&quot;| 64|&quot;&quot;&quot;On-chip SRAM&quot;&quot;&quot;||
 |&quot;&quot;&quot;$DF78&quot;&quot;&quot;|&quot;&quot;&quot;$DF7F&quot;&quot;&quot;| 8|[[Parallel Registers|Parallel.Registers]]|
 |&quot;&quot;&quot;$DF70&quot;&quot;&quot;|&quot;&quot;&quot;$DF77&quot;&quot;&quot;| 8|[[UART Registers|UART.Registers]]|
-|&quot;&quot;&quot;$DF50&quot;&quot;&quot;|&quot;&quot;&quot;$DF6F&quot;&quot;&quot;| 32|[[Timer Registers|Timer.Registers]]|
-|&quot;&quot;&quot;$DF40&quot;&quot;&quot;|&quot;&quot;&quot;$DF4F&quot;&quot;&quot;| 16|[[Control Registers|Control.Registers]]|
-|&quot;&quot;&quot;$DF20&quot;&quot;&quot;|&quot;&quot;&quot;$DF27&quot;&quot;&quot;| 8|[[IO Registers|IO.Registers]]|
+|&quot;&quot;&quot;$DF50&quot;&quot;&quot;|&quot;&quot;&quot;$DF6F&quot;&quot;&quot;| 32|[[Timer Registers|TimerRegisters]]|
+|&quot;&quot;&quot;$DF40&quot;&quot;&quot;|&quot;&quot;&quot;$DF4F&quot;&quot;&quot;| 16|[[Control Registers|ControlRegisters]]|
+|&quot;&quot;&quot;$DF20&quot;&quot;&quot;|&quot;&quot;&quot;$DF27&quot;&quot;&quot;| 8|[[IO Registers|IORegisters]]|
 |&quot;&quot;&quot;$DF00&quot;&quot;&quot;|&quot;&quot;&quot;$DF1F&quot;&quot;&quot;| 32|&quot;&quot;&quot;BCR=1? SRAM&quot;&quot;&quot;|[[CS0B|Chip.Selects]]|[[P70 (50)|Pins]]|
-|~|&quot;&quot;&quot;$DF07&quot;&quot;&quot;| 8|BCR=0? [[IO Registers|IO.Registers]]||
+|~|&quot;&quot;&quot;$DF07&quot;&quot;&quot;| 8|BCR=0? [[IO Registers|IORegisters]]||
 |&quot;&quot;&quot;$8000&quot;&quot;&quot;|&quot;&quot;&quot;$DEFF&quot;&quot;&quot;| 24,320 |External Flash|[[CS4B|Chip.Selects]]|[[P74 (54)|Pins]]|
 |&quot;&quot;&quot;$0200&quot;&quot;&quot;|&quot;&quot;&quot;$7FFF&quot;&quot;&quot;| 32,256 |External SRAM (3)|[[CS3B|Chip.Selects]]|[[P73 (53)|Pins]]|
 |&quot;&quot;&quot;$0100&quot;&quot;&quot;|&quot;&quot;&quot;$01FF&quot;&quot;&quot;| 256|&quot;&quot;&quot;65C02 Page One &quot;&quot;&quot;|
@@ -808,54 +808,153 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 
 </pre>
 </div>
-<div title="PCS" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7|Ports]] [[Chip Select|Chip.Selects]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF27&quot;&quot;&quot;</pre>
+<div title="PCS" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 7|Ports]] [[Chip Select|Chip.Selects]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF27&quot;&quot;&quot;</pre>
 </div>
-<div title="PD0" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 0|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF00&quot;&quot;&quot;</pre>
+<div title="PD0" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 0|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF00&quot;&quot;&quot;</pre>
 </div>
-<div title="PD1" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 1|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF01&quot;&quot;&quot;</pre>
+<div title="PD1" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 1|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF01&quot;&quot;&quot;</pre>
 </div>
-<div title="PD2" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 2|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF02&quot;&quot;&quot;</pre>
+<div title="PD2" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 2|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF02&quot;&quot;&quot;</pre>
 </div>
-<div title="PD3" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 3|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF03&quot;&quot;&quot;</pre>
+<div title="PD3" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 3|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF03&quot;&quot;&quot;</pre>
 </div>
-<div title="PD4" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 4|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF20&quot;&quot;&quot;</pre>
+<div title="PD4" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 4|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF20&quot;&quot;&quot;</pre>
 </div>
-<div title="PD5" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 5|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF21&quot;&quot;&quot;</pre>
+<div title="PD5" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 5|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF21&quot;&quot;&quot;</pre>
 </div>
-<div title="PD6" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 6|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF22&quot;&quot;&quot;</pre>
+<div title="PD6" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 6|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF22&quot;&quot;&quot;</pre>
 </div>
-<div title="PD7" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF23&quot;&quot;&quot;</pre>
+<div title="PD7" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 7|Ports]] [[Data Register|Data.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF23&quot;&quot;&quot;</pre>
 </div>
-<div title="PDD0" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 0|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF04&quot;&quot;&quot;</pre>
+<div title="PDD0" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 0|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF04&quot;&quot;&quot;</pre>
 </div>
-<div title="PDD1" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 1|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF05&quot;&quot;&quot;</pre>
+<div title="PDD1" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 1|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF05&quot;&quot;&quot;</pre>
 </div>
-<div title="PDD2" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 2|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF06&quot;&quot;&quot;</pre>
+<div title="PDD2" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 2|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF06&quot;&quot;&quot;</pre>
 </div>
-<div title="PDD3" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 3|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF07&quot;&quot;&quot;</pre>
+<div title="PDD3" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 3|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF07&quot;&quot;&quot;</pre>
 </div>
-<div title="PDD4" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 4|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF24&quot;&quot;&quot;</pre>
+<div title="PDD4" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 4|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF24&quot;&quot;&quot;</pre>
 </div>
-<div title="PDD5" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 5|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF25&quot;&quot;&quot;</pre>
+<div title="PDD5" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 5|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF25&quot;&quot;&quot;</pre>
 </div>
-<div title="PDD6" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 6|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF26&quot;&quot;&quot;</pre>
+<div title="PDD6" creator="enso" modifier="enso" created="201911130305" tags="IORegisters" changecount="1">
+<pre>[[Port 6|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IORegisters]] at &quot;&quot;&quot;~DF26&quot;&quot;&quot;</pre>
 </div>
+
+<div title="T0LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 0|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF50&quot;&quot;&quot;</pre>
+</div>
+<div title="T0LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 0|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF51&quot;&quot;&quot;</pre>
+</div>
+<div title="T1LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 1|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF52&quot;&quot;&quot;</pre>
+</div>
+<div title="T1LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 1|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF53&quot;&quot;&quot;</pre>
+</div>
+<div title="T2LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 2|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF54&quot;&quot;&quot;</pre>
+</div>
+<div title="T2LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 2|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF55&quot;&quot;&quot;</pre>
+</div>
+<div title="T3LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 3|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF56&quot;&quot;&quot;</pre>
+</div>
+<div title="T3LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 3|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF57&quot;&quot;&quot;</pre>
+</div>
+<div title="T4LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 4|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF58&quot;&quot;&quot;</pre>
+</div>
+<div title="T4LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 4|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF59&quot;&quot;&quot;</pre>
+</div>
+<div title="T5LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 5|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF5A&quot;&quot;&quot;</pre>
+</div>
+<div title="T5LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 5|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF5B&quot;&quot;&quot;</pre>
+</div>
+<div title="T6LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 6|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF5C&quot;&quot;&quot;</pre>
+</div>
+<div title="T6LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 6|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF5D&quot;&quot;&quot;</pre>
+</div>
+<div title="T7LL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 7|Timers]] [[Latch Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF5E&quot;&quot;&quot;</pre>
+</div>
+<div title="T7LH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 7|Timers]] [[Latch Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF5F&quot;&quot;&quot;</pre>
+</div>
+
+<div title="T0CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 0|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF50&quot;&quot;&quot;</pre>
+</div>
+<div title="T0CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 0|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF51&quot;&quot;&quot;</pre>
+</div>
+<div title="T1CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 1|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF52&quot;&quot;&quot;</pre>
+</div>
+<div title="T1CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 1|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF53&quot;&quot;&quot;</pre>
+</div>
+<div title="T2CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 2|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF54&quot;&quot;&quot;</pre>
+</div>
+<div title="T2CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 2|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF55&quot;&quot;&quot;</pre>
+</div>
+<div title="T3CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 3|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF56&quot;&quot;&quot;</pre>
+</div>
+<div title="T3CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 3|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF57&quot;&quot;&quot;</pre>
+</div>
+<div title="T4CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 4|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF58&quot;&quot;&quot;</pre>
+</div>
+<div title="T4CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 4|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF59&quot;&quot;&quot;</pre>
+</div>
+<div title="T5CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 5|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF5A&quot;&quot;&quot;</pre>
+</div>
+<div title="T5CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 5|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF5B&quot;&quot;&quot;</pre>
+</div>
+<div title="T6CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 6|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF5C&quot;&quot;&quot;</pre>
+</div>
+<div title="T6CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 6|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF5D&quot;&quot;&quot;</pre>
+</div>
+<div title="T7CL" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 7|Timers]] [[Counter Register|TimerRegisters]] (low byte) at &quot;&quot;&quot;$DF5E&quot;&quot;&quot;</pre>
+</div>
+<div title="T7CH" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Timer 7|Timers]] [[Counter Register|TimerRegisters]] (high byte) at &quot;&quot;&quot;$DF5F&quot;&quot;&quot;</pre>
+</div>
+
 <div title="PIBER" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
 <pre>[[Parallel Interface Enable Register|Parallel.Registers]] at &quot;&quot;&quot;$DF79&quot;&quot;&quot;</pre>
 </div>
@@ -900,12 +999,12 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 <div title="SiteSubtitle" creator="Enso" modifier="enso" created="201308271742" modified="201911130114" changecount="6">
 <pre>REFERENCE</pre>
 </div>
-<div title="SiteTitle" creator="Enso" modifier="enso" created="201308271742" modified="201911130113" changecount="6">
-<pre>65c256s
+<div title="SiteTitle" creator="Enso" modifier="enso" created="201308271742" modified="201911131848" changecount="7">
+<pre>w65c265s
 </pre>
 </div>
 <div title="System Speed Control Register" creator="enso" modifier="enso" created="201911120217" modified="201911130049" changecount="4">
-<pre>System Speed [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF41&quot;&quot;&quot;
+<pre>System Speed [[Control Register|ControlRegisters]] at &quot;&quot;&quot;$DF41&quot;&quot;&quot;
 |!~DF41|!Description|!Name|!1|!0|
 |7|&quot;&quot;&quot;SSCR7&quot;&quot;&quot;|[[CS7|Chip.Selects]] Speed Select|[[FCLK|Clocks]]|[[FCLK/4|Clocks]]|
 |6|&quot;&quot;&quot;SSCR6&quot;&quot;&quot;|[[CS6|Chip.Selects]] Speed Select|[[FCLK|Clocks]]|[[FCLK/4|Clocks]]|
@@ -919,7 +1018,7 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 </pre>
 </div>
 <div title="Timer Enable Register" creator="enso" modifier="enso" created="201911120147" modified="201911120152" changecount="4">
-<pre>[[Timer|Timers]] Enable [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF43&quot;&quot;&quot;
+<pre>[[Timer|Timers]] Enable [[Control Register|ControlRegisters]] at &quot;&quot;&quot;$DF43&quot;&quot;&quot;
 |!~DF43|!Name|!1 Enables|
 |7|~TER7|[[Timer 7|Timers]]|
 |6|~TER6|[[Timer 6|Timers]]|
@@ -945,7 +1044,7 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 </pre>
 </div>
 <div title="Timer Interrupt Enable Register" creator="enso" modifier="enso" created="201911120144" modified="201911120235" changecount="10">
-<pre>[[Timer|Timers]] [[Interrupt|Interrupts]] Enable [[Register|Timer.Registers]] at &quot;&quot;&quot;$DF46&quot;&quot;&quot;
+<pre>[[Timer|Timers]] [[Interrupt|Interrupts]] Enable [[Register|TimerRegisters]] at &quot;&quot;&quot;$DF46&quot;&quot;&quot;
 |!~DF46|!Name|!1 Enables interrupt for|
 |7|~TIER7|[[Timer 7|Timers]]|
 |6|~TIER6|[[Timer 6|Timers]]|
@@ -958,7 +1057,7 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 </pre>
 </div>
 <div title="Timer Interrupt Flag Register" creator="enso" modifier="enso" created="201911120149" modified="201911120234" changecount="6">
-<pre>[[Timer|Timers]] [[Interrupt|Interrupts]] Flag [[Register|Timer.Registers]] at &quot;&quot;&quot;$DF44&quot;&quot;&quot;
+<pre>[[Timer|Timers]] [[Interrupt|Interrupts]] Flag [[Register|TimerRegisters]] at &quot;&quot;&quot;$DF44&quot;&quot;&quot;
 |!~DF44|!Name|!Interrupted by|
 |7|~TIFR7|[[Timer 7|Timers]]|
 |6|~TIFR6|[[Timer 6|Timers]]|
@@ -971,7 +1070,7 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 </pre>
 </div>
 <div title="Timer.Control.Register" creator="enso" modifier="enso" created="201911120129" modified="201911120154" changecount="23">
-<pre>[[Timer|Timers]] Control [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF42&quot;&quot;&quot;
+<pre>[[Timer|Timers]] Control [[Control Register|ControlRegisters]] at &quot;&quot;&quot;$DF42&quot;&quot;&quot;
 |!~DF42|!Name|Function|||!1|!0|
 |7|TCR7|[[UART3|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
 |6|TCR6|[[UART2|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
@@ -983,44 +1082,44 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 |0|TCR0|[[Timer 4|Timers]] clock|||[[P60|Pins]]|[[FCLK|Clocks]]|
 </pre>
 </div>
-<div title="Timer.Registers" creator="enso" modifier="enso" created="201911130001" modified="201911130324" tags="Timer" changecount="4">
+<div title="TimerRegisters" creator="enso" modifier="enso" created="201911130001" modified="201911130324" tags="Timer" changecount="4">
 <pre>|!Addr|!Name|!Function|
-|[[$DF6F|T7CH|[[Timer 7|Timers]] Counter High|
-|[[$DF6E|T7CL|[[Timer 7|Timers]] Counter Low|
-|[[$DF6D|T6CH|[[Timer 6|Timers]] Counter High|
-|[[$DF6C|T6CL|[[Timer 6|Timers]] Counter Low|
-|[[$DF6B|T5CH|[[Timer 5|Timers]] Counter High|
-|[[$DF6A|T5CL|[[Timer 5|Timers]] Counter Low|
-|[[$DF69|T4CH|[[Timer 4|Timers]] Counter High|
-|[[$DF68|T4CL|[[Timer 4|Timers]] Counter Low|
-|[[$DF67|T3CH|[[Timer 3|Timers]] Counter High|
-|[[$DF66|T3CL|[[Timer 3|Timers]] Counter Low|
-|[[$DF65|T2CH|[[Timer 2|Timers]] Counter High|
-|[[$DF64|T2CL|[[Timer 2|Timers]] Counter Low|
-|[[$DF63|T1CH|[[Timer 1|Timers]] Counter High|
-|[[$DF62|T1CL|[[Timer 1|Timers]] Counter Low|
-|[[$DF61|T0CH|[[Timer 0|Timers]] Counter High|
-|[[$DF60|T0CL|[[Timer 0|Timers]] Counter Low|
+|[[$DF6F|T7CH]]|[[T7CH]]|[[Timer 7|Timers]] Counter High|
+|[[$DF6E|T7CL]]|[[T7CL]]|[[Timer 7|Timers]] Counter Low|
+|[[$DF6D|T6CH]]|[[T6CH]]|[[Timer 6|Timers]] Counter High|
+|[[$DF6C|T6CL]]|[[T6CL]]|[[Timer 6|Timers]] Counter Low|
+|[[$DF6B|T5CH]]|[[T5CH]]|[[Timer 5|Timers]] Counter High|
+|[[$DF6A|T5CL]]|[[T5CL]]|[[Timer 5|Timers]] Counter Low|
+|[[$DF69|T4CH]]|[[T4CH]]|[[Timer 4|Timers]] Counter High|
+|[[$DF68|T4CL]]|[[T4CL]]|[[Timer 4|Timers]] Counter Low|
+|[[$DF67|T3CH]]|[[T3CH]]|[[Timer 3|Timers]] Counter High|
+|[[$DF66|T3CL]]|[[T3CL]]|[[Timer 3|Timers]] Counter Low|
+|[[$DF65|T2CH]]|[[T2CH]]|[[Timer 2|Timers]] Counter High|
+|[[$DF64|T2CL]]|[[T2CL]]|[[Timer 2|Timers]] Counter Low|
+|[[$DF63|T1CH]]|[[T1CH]]|[[Timer 1|Timers]] Counter High|
+|[[$DF62|T1CL]]|[[T1CL]]|[[Timer 1|Timers]] Counter Low|
+|[[$DF61|T0CH]]|[[T0CH]]|[[Timer 0|Timers]] Counter High|
+|[[$DF60|T0CL]]|[[T0CL]]|[[Timer 0|Timers]] Counter Low|
 |!Addr|!Name|!Function|
-|[[$DF5F|T7CH|[[Timer 7|Timers]] Latch High|
-|[[$DF5E|T7CL|[[Timer 7|Timers]] Latch Low|
-|[[$DF5D|T6CH|[[Timer 6|Timers]] Latch High|
-|[[$DF5C|T6CL|[[Timer 6|Timers]] Latch Low|
-|[[$DF5B|T5CH|[[Timer 5|Timers]] Latch High|
-|[[$DF5A|T5CL|[[Timer 5|Timers]] Latch Low|
-|[[$DF59|T4CH|[[Timer 4|Timers]] Latch High|
-|[[$DF58|T4CL|[[Timer 4|Timers]] Latch Low|
-|[[$DF57|T3CH|[[Timer 3|Timers]] Latch High|
-|[[$DF56|T3CL|[[Timer 3|Timers]] Latch Low|
-|[[$DF55|T2CH|[[Timer 2|Timers]] Latch High|
-|[[$DF54|T2CL|[[Timer 2|Timers]] Latch Low|
-|[[$DF53|T1CH|[[Timer 1|Timers]] Latch High|
-|[[$DF52|T1CL|[[Timer 1|Timers]] Latch Low|
-|[[$DF51|T0CH|[[Timer 0|Timers]] Latch High|
-|[[$DF50|T0CL|[[Timer 0|Timers]] Latch Low|</pre>
+|[[$DF5F|T7CH]]|[[T7LH]]|[[Timer 7|Timers]] Latch High|
+|[[$DF5E|T7CL]]|[[T7LL]]|[[Timer 7|Timers]] Latch Low|
+|[[$DF5D|T6CH]]|[[T6LH]]|[[Timer 6|Timers]] Latch High|
+|[[$DF5C|T6CL]]|[[T6LL]]|[[Timer 6|Timers]] Latch Low|
+|[[$DF5B|T5CH]]|[[T5LH]]|[[Timer 5|Timers]] Latch High|
+|[[$DF5A|T5CL]]|[[T5LL]]|[[Timer 5|Timers]] Latch Low|
+|[[$DF59|T4CH]]|[[T4LH]]|[[Timer 4|Timers]] Latch High|
+|[[$DF58|T4CL]]|[[T4LL]]|[[Timer 4|Timers]] Latch Low|
+|[[$DF57|T3CH]]|[[T3LH]]|[[Timer 3|Timers]] Latch High|
+|[[$DF56|T3CL]]|[[T3LL]]|[[Timer 3|Timers]] Latch Low|
+|[[$DF55|T2CH]]|[[T2LH]]|[[Timer 2|Timers]] Latch High|
+|[[$DF54|T2CL]]|[[T2LL]]|[[Timer 2|Timers]] Latch Low|
+|[[$DF53|T1CH]]|[[T1LH]]|[[Timer 1|Timers]] Latch High|
+|[[$DF52|T1CL]]|[[T1LL]]|[[Timer 1|Timers]] Latch Low|
+|[[$DF51|T0CH]]|[[T0LH]]|[[Timer 0|Timers]] Latch High|
+|[[$DF50|T0CL]]|[[T0LL]]|[[Timer 0|Timers]] Latch Low|</pre>
 </div>
 <div title="UART Interrupt Enable Register" creator="enso" modifier="enso" created="201911120227" modified="201911130324" tags="UART" changecount="6">
-<pre>[[UART]] Enable [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF49&quot;&quot;&quot;
+<pre>[[UART]] Enable [[Control Register|ControlRegisters]] at &quot;&quot;&quot;$DF49&quot;&quot;&quot;
 |!~DF49|!Name|!Enables Interrupt for|
 |7|U3TE|&quot;&quot;&quot;[[UART3|UARTs]] transmit&quot;&quot;&quot;|
 |6|U3RE|&quot;&quot;&quot;[[UART3|UARTs]] receive&quot;&quot;&quot;|

@@ -575,12 +575,56 @@ noscript {display:none;} /* Fixes a feature in Firefox 1.5.0.2 where print previ
 </div>
 <!--POST-SHADOWAREA-->
 <div id="storeArea">
+<div title="ACSR0" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 0|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF70&quot;&quot;&quot;</pre>
+</div>
+<div title="ACSR1" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 1|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF72&quot;&quot;&quot;</pre>
+</div>
+<div title="ACSR2" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 2|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF74&quot;&quot;&quot;</pre>
+</div>
+<div title="ACSR3" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 3|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF76&quot;&quot;&quot;</pre>
+</div>
+<div title="ARTD0" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 0|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF71&quot;&quot;&quot;</pre>
+</div>
+<div title="ARTD1" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 1|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF73&quot;&quot;&quot;</pre>
+</div>
+<div title="ARTD2" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 2|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF75&quot;&quot;&quot;</pre>
+</div>
+<div title="ARTD3" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
+<pre>[[UART 3|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF77&quot;&quot;&quot;</pre>
+</div>
 <div title="BCR7 and BE bus control" creator="enso" modifier="enso" created="201911120029" modified="201911120038" changecount="10">
 <pre>|!~BCR7|!BE|!ROM|!Processor|
 |0|0|Internal|External|
 |0|1|Internal|Internal||
 |1|0|External|External|
 |1|1|External|Internal|</pre>
+</div>
+<div title="Bus Control Register" creator="enso" modifier="enso" created="201911120011" modified="201911120213" changecount="27">
+<pre>Bus [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF40&quot;&quot;&quot;
+|!~DF40|Name|
+|7|~BCR7|Ext. ROM||BE enables internal CPU|
+|6|~BCR6|NMIB|P40|Enable; Level-sensitive, mutually-exclusive |
+|5|~BCR5|ABORTB|~|~|
+|4|~BCR4|Watch Dog|||
+|3|~BCR3|Emulate|||
+|2|~BCR2|~TG1|||
+|1|~BCR1|~TG0|||
+|0|~BCR0|Ext. bus||Ports 0,1,2,3 become address and data bus pins|
+</pre>
+</div>
+<div title="Chip.Selects" creator="enso" modifier="enso" created="201911130446" changecount="1">
+<pre>User-configurable Chip Select outputs are controlled by Port 7.  
+
+A &quot;1&quot; in bit x of PCSx enables Chip Select CSx- to be output over P7x while a &quot;0&quot; in PCSx specifies
+the value in the output data register is to be output on P7x. Port 7 data register is set to all &quot;1's&quot; after Reset, and PCS is cleared
+to all &quot;0's&quot; after Reset.</pre>
 </div>
 <div title="Contact" creator="YourName" modifier="enso" created="201310031859" modified="201507082118" changecount="5">
 <pre>Please email:
@@ -620,24 +664,36 @@ I am also active on the 6502 forums, especially 'Programmable Logic' at [[6502.o
 |0|PE56E||
 </pre>
 </div>
+<div title="Edge Interrupt Flag Register" creator="enso" modifier="enso" created="201911120223" modified="201911120228" changecount="4">
+<pre>|!~DF45|!Name|!Interrupted by|
+|7|IRQB||
+|6|PIB||
+|5|NE66||
+|4|NE64||
+|3|PWM||
+|2|PE60||
+|1|PE57||
+|0|PE56||
+</pre>
+</div>
 <div title="IO.Registers" creator="enso" modifier="enso" created="201911122343" modified="201911130305" changecount="13">
 <pre>|!Addr|!Name|!Function|!reset|
-|[[$DF27|PCS]]|[[PCS]]|Port 7 [[Chip Select|Chip.Selects]]|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF26|PDD6]]|[[PDD6]]|Port 6 Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF25|PDD5]]|[[PDD5]]|Port 5 Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF24|PDD4]]|[[PDD4]]|Port 4 Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF23|PD7]]|[[PD7]]|Port 7 Data Register|&quot;&quot;&quot;$FF&quot;&quot;&quot;|
-|[[$DF22|PD6]]|[[PD6]]|Port 6 Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF21|PD5]]|[[PD5]]|Port 5 Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF20|PD4]]|[[PD4]]|Port 4 Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF07|PDD3]]|[[PDD3]]|Port 3 Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF06|PDD2]]|[[PDD2]]|Port 2 Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF05|PDD1]]|[[PDD1]]|Port 1 Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF04|PDD0]]|[[PDD0]]|Port 0 Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF03|PD3]]|[[PD3]]|Port 3 Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF02|PD2]]|[[PD2]]|Port 2 Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF01|PD1]]|[[PD1]]|Port 1 Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
-|[[$DF00|PD0]]|[[PD0]]|Port 0 Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF27|PCS]]|[[PCS]]|[[Port 7|Ports]] [[Chip Select|Chip.Selects]]|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF26|PDD6]]|[[PDD6]]|[[Port 6|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF25|PDD5]]|[[PDD5]]|[[Port 5|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF24|PDD4]]|[[PDD4]]|[[Port 4|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF23|PD7]]|[[PD7]]|[[Port 7|Ports]] Data Register|&quot;&quot;&quot;$FF&quot;&quot;&quot;|
+|[[$DF22|PD6]]|[[PD6]]|[[Port 6|Ports]] Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF21|PD5]]|[[PD5]]|[[Port 5|Ports]] Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF20|PD4]]|[[PD4]]|[[Port 4|Ports]] Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF07|PDD3]]|[[PDD3]]|[[Port 3|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF06|PDD2]]|[[PDD2]]|[[Port 2|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF05|PDD1]]|[[PDD1]]|[[Port 1|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF04|PDD0]]|[[PDD0]]|[[Port 0|Ports]] Data Direction Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF03|PD3]]|[[PD3]]|[[Port 3|Ports]] Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF02|PD2]]|[[PD2]]|[[Port 2|Ports]] Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF01|PD1]]|[[PD1]]|[[Port 1|Ports]] Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
+|[[$DF00|PD0]]|[[PD0]]|[[Port 0|Ports]] Data Register|&quot;&quot;&quot;$00&quot;&quot;&quot;|
 
 For Data Direction registers, 0 means INPUT while 1 means OUTPUT.  Reading a ~PDx register always reads the pin.
 
@@ -645,74 +701,73 @@ For Data Direction registers, 0 means INPUT while 1 means OUTPUT.  Reading a ~PD
 </pre>
 </div>
 <div title="Interrupt Vectors - Emulated" creator="enso" modifier="enso" created="201911130100" tags="journal" changecount="1">
-<pre>
-|"""FFFE,F"""|"""IRQBRK"""|BRK - Software [[Interrupt|Interrupts]]|
-|"""FFFC,D"""|"""IRQRES"""|RES - 'REStart' [[Interrupt|Interrupts]]|
-|"""FFFA,B"""|"""IRQNMI"""|"""Non-Maskable""" [[Interrupt|Interrupts]]|
-|"""FFF8,9"""|"""IABORT"""|ABORT [[Interrupt|Interrupts]]|
-|"""FFF6,7"""|"""IRQRVD"""|reserved|
-|"""FFF4,5"""|"""IRQCOP"""|COP Software [[Interrupt|Interrupts]]|
-|"""FFF2,3"""|"""IRQRVD"""|Reserved|
-|"""FFF0,1"""|"""IRQRVD"""|Reserved|
-|"""FFEE,F"""|"""IRQAT3"""|[[UART3|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFEC,D"""|"""IRQAR3"""|[[UART3|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FFEA,B"""|"""IRQAT2"""|[[UART2|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFE8,9"""|"""IRQAR2"""|[[UART2|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FFE6,7"""|"""IRQAT1"""|[[UART1|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFE4,5"""|"""IRQAR1"""|[[UART1|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FFE2,3"""|"""IRQAT0"""|[[UART0|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFE0,1"""|"""IRQAR0"""|[[UART0|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FFDE,F"""|"""IRQ"""|IRQ Level [[Interrupt|Interrupts]]"""|
-|"""FFDC,D"""|"""IRQPIB"""|Parallel Interface Bus (PIB) [[Interrupt|Interrupts]]|
-|"""FFDA,B"""|"""IRNE66"""|Negative Edge [[Interrupt|Interrupts]] on [[P66|Pins]]|
-|"""FFD8,9"""|"""IRNE64"""|Negative Edge [[Interrupt|Interrupts]] on [[P64|Pins]]|
-|"""FFD6,7"""|"""IRPE62"""|Positive Edge [[Interrupt|Interrupts]] on [[P62|Pins]]|
-|"""FFD4,5"""|"""IRPE60"""|Positive Edge [[Interrupt|Interrupts]] on [[P60|Pins]]|
-|"""FFD2,3"""|"""IRNE57"""|Negative Edge [[Interrupt|Interrupts]] on [[P57|Pins]]|
-|"""FFD0,1"""|"""IRPE56"""|Positive Edge [[Interrupt|Interrupts]] on [[P56|Pins]]|
-|"""FFCE,F"""|"""IRQT7"""|[[Timer 7|Timers]] [[Interrupt|Interrupts]]|
-|"""FFCC,D"""|"""IRQT6"""|[[Timer 6|Timers]] [[Interrupt|Interrupts]]|
-|"""FFCA,B"""|"""IRQT5"""|[[Timer 5|Timers]] [[Interrupt|Interrupts]]|
-|"""FFC8,9"""|"""IRQT4"""|[[Timer 4|Timers]] [[Interrupt|Interrupts]]|
-|"""FFC6,7"""|"""IRQT3"""|[[Timer 3|Timers]] [[Interrupt|Interrupts]]|
-|"""FFC4,5"""|"""IRQT2"""|[[Timer 2|Timers]] [[Interrupt|Interrupts]]|
-|"""FFC2,3"""|"""IRQT1"""|[[Timer 1|Timers]] [[Interrupt|Interrupts]]|
-|"""FFC0,1"""|"""IRQT0"""|[[Timer 0|Timers]] [[Interrupt|Interrupts]]|
+<pre>|&quot;&quot;&quot;FFFE,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQBRK&quot;&quot;&quot;|BRK - Software [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFFC,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQRES&quot;&quot;&quot;|RES - 'REStart' [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFFA,B&quot;&quot;&quot;|&quot;&quot;&quot;IRQNMI&quot;&quot;&quot;|&quot;&quot;&quot;Non-Maskable&quot;&quot;&quot; [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFF8,9&quot;&quot;&quot;|&quot;&quot;&quot;IABORT&quot;&quot;&quot;|ABORT [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFF6,7&quot;&quot;&quot;|&quot;&quot;&quot;IRQRVD&quot;&quot;&quot;|reserved|
+|&quot;&quot;&quot;FFF4,5&quot;&quot;&quot;|&quot;&quot;&quot;IRQCOP&quot;&quot;&quot;|COP Software [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFF2,3&quot;&quot;&quot;|&quot;&quot;&quot;IRQRVD&quot;&quot;&quot;|Reserved|
+|&quot;&quot;&quot;FFF0,1&quot;&quot;&quot;|&quot;&quot;&quot;IRQRVD&quot;&quot;&quot;|Reserved|
+|&quot;&quot;&quot;FFEE,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT3&quot;&quot;&quot;|[[UART3|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFEC,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR3&quot;&quot;&quot;|[[UART3|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFEA,B&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT2&quot;&quot;&quot;|[[UART2|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFE8,9&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR2&quot;&quot;&quot;|[[UART2|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFE6,7&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT1&quot;&quot;&quot;|[[UART1|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFE4,5&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR1&quot;&quot;&quot;|[[UART1|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFE2,3&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT0&quot;&quot;&quot;|[[UART0|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFE0,1&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR0&quot;&quot;&quot;|[[UART0|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFDE,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQ&quot;&quot;&quot;|IRQ Level [[Interrupt|Interrupts]]&quot;&quot;&quot;|
+|&quot;&quot;&quot;FFDC,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQPIB&quot;&quot;&quot;|Parallel Interface Bus (PIB) [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFDA,B&quot;&quot;&quot;|&quot;&quot;&quot;IRNE66&quot;&quot;&quot;|Negative Edge [[Interrupt|Interrupts]] on [[P66|Pins]]|
+|&quot;&quot;&quot;FFD8,9&quot;&quot;&quot;|&quot;&quot;&quot;IRNE64&quot;&quot;&quot;|Negative Edge [[Interrupt|Interrupts]] on [[P64|Pins]]|
+|&quot;&quot;&quot;FFD6,7&quot;&quot;&quot;|&quot;&quot;&quot;IRPE62&quot;&quot;&quot;|Positive Edge [[Interrupt|Interrupts]] on [[P62|Pins]]|
+|&quot;&quot;&quot;FFD4,5&quot;&quot;&quot;|&quot;&quot;&quot;IRPE60&quot;&quot;&quot;|Positive Edge [[Interrupt|Interrupts]] on [[P60|Pins]]|
+|&quot;&quot;&quot;FFD2,3&quot;&quot;&quot;|&quot;&quot;&quot;IRNE57&quot;&quot;&quot;|Negative Edge [[Interrupt|Interrupts]] on [[P57|Pins]]|
+|&quot;&quot;&quot;FFD0,1&quot;&quot;&quot;|&quot;&quot;&quot;IRPE56&quot;&quot;&quot;|Positive Edge [[Interrupt|Interrupts]] on [[P56|Pins]]|
+|&quot;&quot;&quot;FFCE,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQT7&quot;&quot;&quot;|[[Timer 7|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFCC,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQT6&quot;&quot;&quot;|[[Timer 6|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFCA,B&quot;&quot;&quot;|&quot;&quot;&quot;IRQT5&quot;&quot;&quot;|[[Timer 5|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFC8,9&quot;&quot;&quot;|&quot;&quot;&quot;IRQT4&quot;&quot;&quot;|[[Timer 4|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFC6,7&quot;&quot;&quot;|&quot;&quot;&quot;IRQT3&quot;&quot;&quot;|[[Timer 3|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFC4,5&quot;&quot;&quot;|&quot;&quot;&quot;IRQT2&quot;&quot;&quot;|[[Timer 2|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFC2,3&quot;&quot;&quot;|&quot;&quot;&quot;IRQT1&quot;&quot;&quot;|[[Timer 1|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFC0,1&quot;&quot;&quot;|&quot;&quot;&quot;IRQT0&quot;&quot;&quot;|[[Timer 0|Timers]] [[Interrupt|Interrupts]]|
 </pre>
 </div>
 <div title="Interrupt Vectors - Native" creator="enso" modifier="enso" created="201911111914" modified="201911130102" changecount="11">
-<pre>|"""FFBE,F"""|"""IRQRVD"""|"""Reserved"""|
-|"""FFBC,D"""|"""IRQRVD"""|Reserved|
-|"""FFBA,B"""|"""IRQNMI"""|"""Non-Maskable""" [[Interrupt|Interrupts]]|
-|"""FFB8,9"""|"""IABORT"""|ABORT [[Interrupt|Interrupts]]|
-|"""FFB6,7"""|"""IRQBRK"""|BRK Software [[Interrupt|Interrupts]]|
-|"""FFB4,5"""|"""IRQCOP"""|COP Software [[Interrupt|Interrupts]]|
-|"""FFB2,3"""|"""IRQRVD"""|Reserved|
-|"""FFB0,1"""|"""IRQRVD"""|Reserved|
-|"""FFAE,F"""|"""IRQAT3"""|[[UART3|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFAC,D"""|"""IRQAR3"""|[[UART3|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FFAA,B"""|"""IRQAT2"""|[[UART2|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFA8,9"""|"""IRQAR2"""|[[UART2|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FFA6,7"""|"""IRQAT1"""|[[UART1|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFA4,5"""|"""IRQAR1"""|[[UART1|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FFA2,3"""|"""IRQAT0"""|[[UART0|UARTs]] Transmitter [[Interrupt|Interrupts]]|
-|"""FFA0,1"""|"""IRQAR0"""|[[UART0|UARTs]] Receiver [[Interrupt|Interrupts]]|
-|"""FF9E,F"""|"""IRQ"""|IRQ Level [[Interrupt|Interrupts]]|
-|"""FF9C,D"""|"""IRQPIB"""|Parallel Interface Bus (PIB) [[Interrupt|Interrupts]]|
-|"""FF9A,B"""|"""IRNE66"""|Negative Edge [[Interrupt|Interrupts]] on [[P66|Pins]]|
-|"""FF98,9"""|"""IRNE64"""|Negative Edge [[Interrupt|Interrupts]] on [[P64|Pins]]|
-|"""FF96,7"""|"""IRPE62"""|Positive Edge [[Interrupt|Interrupts]] on [[P62|Pins]]|
-|"""FF94,5"""|"""IRPE60"""|Positive Edge [[Interrupt|Interrupts]] on [[P60|Pins]]|
-|"""FF92,3"""|"""IRNE57"""|Negative Edge [[Interrupt|Interrupts]] on [[P57|Pins]]|
-|"""FF90,1"""|"""IRPE56"""|Positive Edge [[Interrupt|Interrupts]] on [[P56|Pins]]|
-|"""FF8E,F"""|"""IRQT7"""|[[Timer 7|Timers]] [[Interrupt|Interrupts]]|
-|"""FF8C,D"""|"""IRQT6"""|[[Timer 6|Timers]] [[Interrupt|Interrupts]]|
-|"""FF8A,B"""|"""IRQT5"""|[[Timer 5|Timers]] [[Interrupt|Interrupts]]|
-|"""FF88,9"""|"""IRQT4"""|[[Timer 4|Timers]] [[Interrupt|Interrupts]]|
-|"""FF86,7"""|"""IRQT3"""|[[Timer 3|Timers]] [[Interrupt|Interrupts]]|
-|"""FF84,5"""|"""IRQT2"""|[[Timer 2|Timers]] [[Interrupt|Interrupts]]|
-|"""FF82,3"""|"""IRQT1"""|[[Timer 1|Timers]] [[Interrupt|Interrupts]]|
-|"""FF80,1"""|"""IRQT0"""|[[Timer 0|Timers]] [[Interrupt|Interrupts]]|
+<pre>|&quot;&quot;&quot;FFBE,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQRVD&quot;&quot;&quot;|&quot;&quot;&quot;Reserved&quot;&quot;&quot;|
+|&quot;&quot;&quot;FFBC,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQRVD&quot;&quot;&quot;|Reserved|
+|&quot;&quot;&quot;FFBA,B&quot;&quot;&quot;|&quot;&quot;&quot;IRQNMI&quot;&quot;&quot;|&quot;&quot;&quot;Non-Maskable&quot;&quot;&quot; [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFB8,9&quot;&quot;&quot;|&quot;&quot;&quot;IABORT&quot;&quot;&quot;|ABORT [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFB6,7&quot;&quot;&quot;|&quot;&quot;&quot;IRQBRK&quot;&quot;&quot;|BRK Software [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFB4,5&quot;&quot;&quot;|&quot;&quot;&quot;IRQCOP&quot;&quot;&quot;|COP Software [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFB2,3&quot;&quot;&quot;|&quot;&quot;&quot;IRQRVD&quot;&quot;&quot;|Reserved|
+|&quot;&quot;&quot;FFB0,1&quot;&quot;&quot;|&quot;&quot;&quot;IRQRVD&quot;&quot;&quot;|Reserved|
+|&quot;&quot;&quot;FFAE,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT3&quot;&quot;&quot;|[[UART3|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFAC,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR3&quot;&quot;&quot;|[[UART3|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFAA,B&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT2&quot;&quot;&quot;|[[UART2|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFA8,9&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR2&quot;&quot;&quot;|[[UART2|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFA6,7&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT1&quot;&quot;&quot;|[[UART1|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFA4,5&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR1&quot;&quot;&quot;|[[UART1|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFA2,3&quot;&quot;&quot;|&quot;&quot;&quot;IRQAT0&quot;&quot;&quot;|[[UART0|UARTs]] Transmitter [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FFA0,1&quot;&quot;&quot;|&quot;&quot;&quot;IRQAR0&quot;&quot;&quot;|[[UART0|UARTs]] Receiver [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF9E,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQ&quot;&quot;&quot;|IRQ Level [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF9C,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQPIB&quot;&quot;&quot;|Parallel Interface Bus (PIB) [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF9A,B&quot;&quot;&quot;|&quot;&quot;&quot;IRNE66&quot;&quot;&quot;|Negative Edge [[Interrupt|Interrupts]] on [[P66|Pins]]|
+|&quot;&quot;&quot;FF98,9&quot;&quot;&quot;|&quot;&quot;&quot;IRNE64&quot;&quot;&quot;|Negative Edge [[Interrupt|Interrupts]] on [[P64|Pins]]|
+|&quot;&quot;&quot;FF96,7&quot;&quot;&quot;|&quot;&quot;&quot;IRPE62&quot;&quot;&quot;|Positive Edge [[Interrupt|Interrupts]] on [[P62|Pins]]|
+|&quot;&quot;&quot;FF94,5&quot;&quot;&quot;|&quot;&quot;&quot;IRPE60&quot;&quot;&quot;|Positive Edge [[Interrupt|Interrupts]] on [[P60|Pins]]|
+|&quot;&quot;&quot;FF92,3&quot;&quot;&quot;|&quot;&quot;&quot;IRNE57&quot;&quot;&quot;|Negative Edge [[Interrupt|Interrupts]] on [[P57|Pins]]|
+|&quot;&quot;&quot;FF90,1&quot;&quot;&quot;|&quot;&quot;&quot;IRPE56&quot;&quot;&quot;|Positive Edge [[Interrupt|Interrupts]] on [[P56|Pins]]|
+|&quot;&quot;&quot;FF8E,F&quot;&quot;&quot;|&quot;&quot;&quot;IRQT7&quot;&quot;&quot;|[[Timer 7|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF8C,D&quot;&quot;&quot;|&quot;&quot;&quot;IRQT6&quot;&quot;&quot;|[[Timer 6|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF8A,B&quot;&quot;&quot;|&quot;&quot;&quot;IRQT5&quot;&quot;&quot;|[[Timer 5|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF88,9&quot;&quot;&quot;|&quot;&quot;&quot;IRQT4&quot;&quot;&quot;|[[Timer 4|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF86,7&quot;&quot;&quot;|&quot;&quot;&quot;IRQT3&quot;&quot;&quot;|[[Timer 3|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF84,5&quot;&quot;&quot;|&quot;&quot;&quot;IRQT2&quot;&quot;&quot;|[[Timer 2|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF82,3&quot;&quot;&quot;|&quot;&quot;&quot;IRQT1&quot;&quot;&quot;|[[Timer 1|Timers]] [[Interrupt|Interrupts]]|
+|&quot;&quot;&quot;FF80,1&quot;&quot;&quot;|&quot;&quot;&quot;IRQT0&quot;&quot;&quot;|[[Timer 0|Timers]] [[Interrupt|Interrupts]]|
 
 Also: [[Interrupt Vectors - Emulated]]</pre>
 </div>
@@ -723,116 +778,89 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 [[Contact]]
 </pre>
 </div>
-<div title="Memory Map" creator="enso" modifier="enso" created="201911111847" modified="201911130112" changecount="58">
+<div title="Memory Map" creator="enso" modifier="enso" created="201911111847" modified="201911130446" changecount="59">
 <pre>|!Start|!End|!Size|!Description|!CS|!Pin|
-|"""$C00000"""|"""$FFFFFF"""| """4MB"""|User 4MB Memory|[[CS7B|Chip.Selects]]|[[P77 (57)|Pins]]|
-|"""$400000"""|"""$BFFFFF"""| """8MB"""|User 8MB Memory|[[CS6B|Chip.Selects]]|[[P76 (56)|Pins]]|
-|"""$000000"""|"""$3FFFFF"""| """4MB"""|User 4MB|[[CS5B|Chip.Selects]]|[[P75 (55)|Pins]]|
-|"""$FF00"""|"""$FFFF"""| 256|[[Interrupt Vectors - Native]]||
-|"""$E000"""|"""$FEFF"""| 7936|"""MENSCH Monitor ROM (1)"""|[[CS4B|Chip.Selects]]|[[P74 (54)|Pins]]|
-|"""$DFC0"""|"""$DFCF"""| 64|"""PIB SRAM Expansion """|[[CS1B|Chip.Selects]]|[[P71 (51)|Pins]]|
-|"""$DF80"""|"""$DFBF"""| 64|"""On-chip SRAM"""||
-|"""$DF78"""|"""$DF7F"""| 8|[[Parallel Registers|Parallel.Registers]]|
-|"""$DF70"""|"""$DF77"""| 8|[[UART Registers|UART.Registers]]|
-|"""$DF50"""|"""$DF6F"""| 32|[[Timer Registers|Timer.Registers]]|
-|"""$DF40"""|"""$DF4F"""| 16|[[Control Registers|Control.Registers]]|
-|"""$DF20"""|"""$DF27"""| 8|[[IO Registers|IO.Registers]]|
-|"""$DF00"""|"""$DF1F"""| 32|"""BCR=1? SRAM"""|[[CS0B|Chip.Selects]]|[[P70 (50)|Pins]]|
-|~|"""$DF07"""| 8|BCR=0? [[IO Registers|IO.Registers]]||
-|"""$8000"""|"""$DEFF"""| 24,320 |External Flash|[[CS4B|Chip.Selects]]|[[P74 (54)|Pins]]|
-|"""$0200"""|"""$7FFF"""| 32,256 |External SRAM (3)|[[CS3B|Chip.Selects]]|[[P73 (53)|Pins]]|
-|"""$0100"""|"""$01FF"""| 256|"""65C02 Page One """|
-|"""$0000"""|"""$00FF"""| 256|"""65C02 Page Zero"""|
+|&quot;&quot;&quot;$C00000&quot;&quot;&quot;|&quot;&quot;&quot;$FFFFFF&quot;&quot;&quot;| &quot;&quot;&quot;4MB&quot;&quot;&quot;|User 4MB Memory|[[CS7B|Chip.Selects]]|[[P77 (57)|Pins]]|
+|&quot;&quot;&quot;$400000&quot;&quot;&quot;|&quot;&quot;&quot;$BFFFFF&quot;&quot;&quot;| &quot;&quot;&quot;8MB&quot;&quot;&quot;|User 8MB Memory|[[CS6B|Chip.Selects]]|[[P76 (56)|Pins]]|
+|&quot;&quot;&quot;$000000&quot;&quot;&quot;|&quot;&quot;&quot;$3FFFFF&quot;&quot;&quot;| &quot;&quot;&quot;4MB&quot;&quot;&quot;|User 4MB|[[CS5B|Chip.Selects]]|[[P75 (55)|Pins]]|
+|&quot;&quot;&quot;$FF00&quot;&quot;&quot;|&quot;&quot;&quot;$FFFF&quot;&quot;&quot;| 256|[[Interrupt Vectors - Native]]||
+|&quot;&quot;&quot;$E000&quot;&quot;&quot;|&quot;&quot;&quot;$FEFF&quot;&quot;&quot;| 7936|&quot;&quot;&quot;MENSCH Monitor ROM (1)&quot;&quot;&quot;|[[CS4B|Chip.Selects]]|[[P74 (54)|Pins]]|
+|&quot;&quot;&quot;$DFC0&quot;&quot;&quot;|&quot;&quot;&quot;$DFCF&quot;&quot;&quot;| 64|&quot;&quot;&quot;PIB SRAM Expansion &quot;&quot;&quot;|[[CS1B|Chip.Selects]]|[[P71 (51)|Pins]]|
+|&quot;&quot;&quot;$DF80&quot;&quot;&quot;|&quot;&quot;&quot;$DFBF&quot;&quot;&quot;| 64|&quot;&quot;&quot;On-chip SRAM&quot;&quot;&quot;||
+|&quot;&quot;&quot;$DF78&quot;&quot;&quot;|&quot;&quot;&quot;$DF7F&quot;&quot;&quot;| 8|[[Parallel Registers|Parallel.Registers]]|
+|&quot;&quot;&quot;$DF70&quot;&quot;&quot;|&quot;&quot;&quot;$DF77&quot;&quot;&quot;| 8|[[UART Registers|UART.Registers]]|
+|&quot;&quot;&quot;$DF50&quot;&quot;&quot;|&quot;&quot;&quot;$DF6F&quot;&quot;&quot;| 32|[[Timer Registers|Timer.Registers]]|
+|&quot;&quot;&quot;$DF40&quot;&quot;&quot;|&quot;&quot;&quot;$DF4F&quot;&quot;&quot;| 16|[[Control Registers|Control.Registers]]|
+|&quot;&quot;&quot;$DF20&quot;&quot;&quot;|&quot;&quot;&quot;$DF27&quot;&quot;&quot;| 8|[[IO Registers|IO.Registers]]|
+|&quot;&quot;&quot;$DF00&quot;&quot;&quot;|&quot;&quot;&quot;$DF1F&quot;&quot;&quot;| 32|&quot;&quot;&quot;BCR=1? SRAM&quot;&quot;&quot;|[[CS0B|Chip.Selects]]|[[P70 (50)|Pins]]|
+|~|&quot;&quot;&quot;$DF07&quot;&quot;&quot;| 8|BCR=0? [[IO Registers|IO.Registers]]||
+|&quot;&quot;&quot;$8000&quot;&quot;&quot;|&quot;&quot;&quot;$DEFF&quot;&quot;&quot;| 24,320 |External Flash|[[CS4B|Chip.Selects]]|[[P74 (54)|Pins]]|
+|&quot;&quot;&quot;$0200&quot;&quot;&quot;|&quot;&quot;&quot;$7FFF&quot;&quot;&quot;| 32,256 |External SRAM (3)|[[CS3B|Chip.Selects]]|[[P73 (53)|Pins]]|
+|&quot;&quot;&quot;$0100&quot;&quot;&quot;|&quot;&quot;&quot;$01FF&quot;&quot;&quot;| 256|&quot;&quot;&quot;65C02 Page One &quot;&quot;&quot;|
+|&quot;&quot;&quot;$0000&quot;&quot;&quot;|&quot;&quot;&quot;$00FF&quot;&quot;&quot;| 256|&quot;&quot;&quot;65C02 Page Zero&quot;&quot;&quot;|
 
 |!1|When on-chip ROM enabled:|
-|*|"""$E000 - $FFFF""" will not appear in [[CS4B|Chip.Selects]]|
-|*|"""$DF00 - $DFFF""" will not appear in [[CS4B|Chip.Selects]] or [[CS5B|Chip.Selects]]|
+|*|&quot;&quot;&quot;$E000 - $FFFF&quot;&quot;&quot; will not appear in [[CS4B|Chip.Selects]]|
+|*|&quot;&quot;&quot;$DF00 - $DFFF&quot;&quot;&quot; will not appear in [[CS4B|Chip.Selects]] or [[CS5B|Chip.Selects]]|
 |!3|SSCR2 bit meaning:|
-|0|Internal RAM, CS3B active for """$0200 - $7FFF"""|
-|1|External RAM, CS3B active for """$0000 - $7FFF"""|
+|0|Internal RAM, CS3B active for &quot;&quot;&quot;$0200 - $7FFF&quot;&quot;&quot;|
+|1|External RAM, CS3B active for &quot;&quot;&quot;$0000 - $7FFF&quot;&quot;&quot;|
 
 </pre>
 </div>
 <div title="PCS" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Chip Select]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF27&quot;&quot;&quot;</pre>
+<pre>[[Port 7|Ports]] [[Chip Select|Chip.Selects]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF27&quot;&quot;&quot;</pre>
 </div>
 <div title="PD0" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF00&quot;&quot;&quot;</pre>
+<pre>[[Port 0|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF00&quot;&quot;&quot;</pre>
 </div>
 <div title="PD1" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF01&quot;&quot;&quot;</pre>
+<pre>[[Port 1|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF01&quot;&quot;&quot;</pre>
 </div>
 <div title="PD2" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF02&quot;&quot;&quot;</pre>
+<pre>[[Port 2|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF02&quot;&quot;&quot;</pre>
 </div>
 <div title="PD3" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF03&quot;&quot;&quot;</pre>
-</div>
-<div title="PDD0" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 0]] [[Data Direction Register|Data Direction Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF04&quot;&quot;&quot;</pre>
-</div>
-<div title="PDD1" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 1]] [[Data Direction Register|Data Direction Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF05&quot;&quot;&quot;</pre>
-</div>
-<div title="PDD2" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 2]] [[Data Direction Register|Data Direction Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF06&quot;&quot;&quot;</pre>
-</div>
-<div title="PDD3" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 3]] [[Data Direction Register|Data Direction Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF07&quot;&quot;&quot;</pre>
+<pre>[[Port 3|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF03&quot;&quot;&quot;</pre>
 </div>
 <div title="PD4" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF20&quot;&quot;&quot;</pre>
+<pre>[[Port 4|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF20&quot;&quot;&quot;</pre>
 </div>
 <div title="PD5" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF21&quot;&quot;&quot;</pre>
+<pre>[[Port 5|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF21&quot;&quot;&quot;</pre>
 </div>
 <div title="PD6" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF22&quot;&quot;&quot;</pre>
+<pre>[[Port 6|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF22&quot;&quot;&quot;</pre>
 </div>
 <div title="PD7" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 7]] [[Data Register|Data Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF23&quot;&quot;&quot;</pre>
+<pre>[[Port 7|Ports]] [[Data Register|Data.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF23&quot;&quot;&quot;</pre>
+</div>
+<div title="PDD0" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
+<pre>[[Port 0|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF04&quot;&quot;&quot;</pre>
+</div>
+<div title="PDD1" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
+<pre>[[Port 1|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF05&quot;&quot;&quot;</pre>
+</div>
+<div title="PDD2" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
+<pre>[[Port 2|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF06&quot;&quot;&quot;</pre>
+</div>
+<div title="PDD3" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
+<pre>[[Port 3|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF07&quot;&quot;&quot;</pre>
 </div>
 <div title="PDD4" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 4]] [[Data Direction Register|Data Direction Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF24&quot;&quot;&quot;</pre>
+<pre>[[Port 4|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF24&quot;&quot;&quot;</pre>
 </div>
 <div title="PDD5" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 5]] [[Data Direction Register|Data Direction Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF25&quot;&quot;&quot;</pre>
+<pre>[[Port 5|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF25&quot;&quot;&quot;</pre>
 </div>
 <div title="PDD6" creator="enso" modifier="enso" created="201911130305" tags="IO.Registers" changecount="1">
-<pre>[[Port 6]] [[Data Direction Register|Data Direction Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF26&quot;&quot;&quot;</pre>
-</div>
-
-<div title="ACSR0" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 0|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF70&quot;&quot;&quot;</pre>
-</div>
-<div title="ARTD0" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 0|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF71&quot;&quot;&quot;</pre>
-</div>
-<div title="ACSR1" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 1|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF72&quot;&quot;&quot;</pre>
-</div>
-<div title="ARTD1" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 1|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF73&quot;&quot;&quot;</pre>
-</div>
-<div title="ACSR2" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 2|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF74&quot;&quot;&quot;</pre>
-</div>
-<div title="ARTD2" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 2|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF75&quot;&quot;&quot;</pre>
-</div>
-<div title="ACSR3" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 3|UARTs]] [[Control/Status Register|UART.Registers]]  at &quot;&quot;&quot;$DF76&quot;&quot;&quot;</pre>
-</div>
-<div title="ARTD3" creator="enso" modifier="enso" created="201911130245" tags="UART.Registers" changecount="1">
-<pre>[[UART 3|UARTs]] [[Data Register|UART.Registers]]  at &quot;&quot;&quot;$DF77&quot;&quot;&quot;</pre>
-</div>
-
-
-<div title="PIBFR" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
-<pre>[[Parallel Interface Flag Register|Parallel.Registers]]  at &quot;&quot;&quot;$DF78&quot;&quot;&quot;</pre>
+<pre>[[Port 6|Ports]] [[Data Direction Register|Data.Direction.Registers]] [[IO Register|IO.Registers]] at &quot;&quot;&quot;~DF26&quot;&quot;&quot;</pre>
 </div>
 <div title="PIBER" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
 <pre>[[Parallel Interface Enable Register|Parallel.Registers]] at &quot;&quot;&quot;$DF79&quot;&quot;&quot;</pre>
+</div>
+<div title="PIBFR" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
+<pre>[[Parallel Interface Flag Register|Parallel.Registers]]  at &quot;&quot;&quot;$DF78&quot;&quot;&quot;</pre>
 </div>
 <div title="PIR2" creator="enso" modifier="enso" created="201911130245" tags="Parallel.Registers" changecount="1">
 <pre>[[Parallel Interface Register|Parallel.Registers]] 4 at &quot;&quot;&quot;$DF7A&quot;&quot;&quot;</pre>
@@ -855,16 +883,19 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 </div>
 <div title="Parallel.Registers" creator="enso" modifier="enso" created="201911130241" modified="201911130300" changecount="5">
 <pre>|!Addr|!Name|!Function|!Init|!Note|
-|[[$DF7F|PIR7]]|[[PIR7]]|Parallel Interface Register 7| ? |Automatic Handshake|
-|[[$DF7E|PIR6]]|[[PIR6]]|Parallel Interface Register 6| ? |
-|[[$DF7D|PIR5]]|[[PIR5]]|Parallel Interface Register 5| ? |
-|[[$DF7C|PIR4]]|[[PIR4]]&quot;|Parallel Interface Register 4| ? |
-|[[$DF7B|PIR3]]|[[PIR3]]|Parallel Interface Register 3| ? |Automatic Handshake|
-|[[$DF7A|PIR2]]|[[PIR2]]|Parallel Interface Register 2| ? |
-|[[$DF79|PIBER]]|[[PIBER]]|Parallel Interface Enable Register|&quot;&quot;&quot;00&quot;&quot;&quot;|
-|[[$DF78|PIBFR]]|[[PIBFR]]|Parallel Interface Flag|&quot;&quot;&quot;00&quot;&quot;&quot;|
+|[[$DF7F|PIR7]]|[[PIR7]]|[[Parallel Interface|Ports]] Register 7| ? |Automatic Handshake|
+|[[$DF7E|PIR6]]|[[PIR6]]|[[Parallel Interface|Ports]] Register 6| ? |
+|[[$DF7D|PIR5]]|[[PIR5]]|[[Parallel Interface|Ports]] Register 5| ? |
+|[[$DF7C|PIR4]]|[[PIR4]]|[[Parallel Interface|Ports]] Register 4| ? |
+|[[$DF7B|PIR3]]|[[PIR3]]|[[Parallel Interface|Ports]] Register 3| ? |Automatic Handshake|
+|[[$DF7A|PIR2]]|[[PIR2]]|[[Parallel Interface|Ports]] Register 2| ? |
+|[[$DF79|PIBER]]|[[PIBER]]|[[Parallel Interface|Ports]] Enable Register|&quot;&quot;&quot;00&quot;&quot;&quot;|
+|[[$DF78|PIBFR]]|[[PIBFR]]|[[Parallel Interface|Ports]] Flag|&quot;&quot;&quot;00&quot;&quot;&quot;|
 
 </pre>
+</div>
+<div title="Pins" creator="enso" modifier="enso" created="201911130447" changecount="1">
+<pre>TODO: Pinning information</pre>
 </div>
 <div title="SiteSubtitle" creator="Enso" modifier="enso" created="201308271742" modified="201911130114" changecount="6">
 <pre>REFERENCE</pre>
@@ -873,23 +904,8 @@ Also: [[Interrupt Vectors - Emulated]]</pre>
 <pre>65c256s
 </pre>
 </div>
-<div title="Bus Control Register" creator="enso" modifier="enso" created="201911120011" modified="201911120213" changecount="27">
-<pre>
-Bus [[Control Register|Control.Registers]] at """$DF40"""
-|!~DF40|Name|
-|7|~BCR7|Ext. ROM||BE enables internal CPU|
-|6|~BCR6|NMIB|P40|Enable; Level-sensitive, mutually-exclusive |
-|5|~BCR5|ABORTB|~|~|
-|4|~BCR4|Watch Dog|||
-|3|~BCR3|Emulate|||
-|2|~BCR2|~TG1|||
-|1|~BCR1|~TG0|||
-|0|~BCR0|Ext. bus||Ports 0,1,2,3 become address and data bus pins|
-</pre>
-</div>
 <div title="System Speed Control Register" creator="enso" modifier="enso" created="201911120217" modified="201911130049" changecount="4">
-<pre>
-System Speed [[Control Register|Control.Registers]] at """$DF41"""
+<pre>System Speed [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF41&quot;&quot;&quot;
 |!~DF41|!Description|!Name|!1|!0|
 |7|&quot;&quot;&quot;SSCR7&quot;&quot;&quot;|[[CS7|Chip.Selects]] Speed Select|[[FCLK|Clocks]]|[[FCLK/4|Clocks]]|
 |6|&quot;&quot;&quot;SSCR6&quot;&quot;&quot;|[[CS6|Chip.Selects]] Speed Select|[[FCLK|Clocks]]|[[FCLK/4|Clocks]]|
@@ -902,23 +918,8 @@ System Speed [[Control Register|Control.Registers]] at """$DF41"""
 
 </pre>
 </div>
-<div title="Timer.Control.Register" creator="enso" modifier="enso" created="201911120129" modified="201911120154" changecount="23">
-<pre>
-[[Timer|Timers]] Control [[Control Register|Control.Registers]] at """$DF42"""
-|!~DF42|!Name|Function|||!1|!0|
-|7|TCR7|[[UART3|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
-|6|TCR6|[[UART2|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
-|5|TCR5|[[UART1|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
-|4|TCR4|[[UART0|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
-|3|TCR3|Pulse Measurement on [[P62|Pins]]|!11|!10|!01|!00|
-|2|TCR2|~|Both Edges|Neg Edge|Pos Edge|Disable|
-|1|TCR1|[[Timer 4|Timers]] on [[P61|Pins]]|||Enable|Disable|
-|0|TCR0|[[Timer 4|Timers]] clock|||[[P60|Pins]]|[[FCLK|Clocks]]|
-</pre>
-</div>
 <div title="Timer Enable Register" creator="enso" modifier="enso" created="201911120147" modified="201911120152" changecount="4">
-<pre>
-[[Timer|Timers]] Enable [[Control Register|Control.Registers]] at """$DF43"""
+<pre>[[Timer|Timers]] Enable [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF43&quot;&quot;&quot;
 |!~DF43|!Name|!1 Enables|
 |7|~TER7|[[Timer 7|Timers]]|
 |6|~TER6|[[Timer 6|Timers]]|
@@ -930,49 +931,6 @@ System Speed [[Control Register|Control.Registers]] at """$DF41"""
 |0|~TER0|[[Timer 0|Timers]]|
 </pre>
 </div>
-<div title="Timer Interrupt Flag Register" creator="enso" modifier="enso" created="201911120149" modified="201911120234" changecount="6">
-<pre>
-[[Timer|Timers]] [[Interrupt|Interrupts]] Flag [[Register|Timer.Registers]] at """$DF44"""
-|!~DF44|!Name|!Interrupted by|
-|7|~TIFR7|[[Timer 7|Timers]]|
-|6|~TIFR6|[[Timer 6|Timers]]|
-|5|~TIFR5|[[Timer 5|Timers]]|
-|4|~TIFR4|[[Timer 4|Timers]]|
-|3|~TIFR3|[[Timer 3|Timers]]|
-|2|~TIFR2|[[Timer 2|Timers]]|
-|1|~TIFR1|[[Timer 1|Timers]]|
-|0|~TIFR0|[[Timer 0|Timers]]|
-</pre>
-</div>
-<div title="Edge Interrupt Flag Register" creator="enso" modifier="enso" created="201911120223" modified="201911120228" changecount="4">
-<pre>|!~DF45|!Name|!Interrupted by|
-|7|IRQB||
-|6|PIB||
-|5|NE66||
-|4|NE64||
-|3|PWM||
-|2|PE60||
-|1|PE57||
-|0|PE56||
-</pre>
-</div>
-
-<div title="Timer Interrupt Enable Register" creator="enso" modifier="enso" created="201911120144" modified="201911120235" changecount="10">
-<pre>
-[[Timer|Timers]] [[Interrupt|Interrupts]] Enable [[Register|Timer.Registers]] at """$DF46"""
-|!~DF46|!Name|!1 Enables interrupt for|
-|7|~TIER7|[[Timer 7|Timers]]|
-|6|~TIER6|[[Timer 6|Timers]]|
-|5|~TIER5|[[Timer 5|Timers]]|
-|4|~TIER4|[[Timer 4|Timers]]|
-|3|~TIER3|[[Timer 3|Timers]]|
-|2|~TIER2|[[Timer 2|Timers]]|
-|1|~TIER1|[[Timer 1|Timers]]|
-|0|~TIER0|[[Timer 0|Timers]]|
-</pre>
-</div>
-
-
 <div title="Timer Functions" creator="enso" modifier="enso" created="201911120043" modified="201911120047" changecount="9">
 <pre>|!#|!Timer Function|!TCR0|&gt;|
 |~|~|0|1|
@@ -984,6 +942,45 @@ System Speed [[Control Register|Control.Registers]] at """$DF41"""
 |T2|Prescaled Interrupt|[[FCLK/16|Clocks]]||
 |T1|Time of Day|[[CLK|Clocks]]||
 |T0|Monitor Watch Dog|[[CLK|Clocks]]||
+</pre>
+</div>
+<div title="Timer Interrupt Enable Register" creator="enso" modifier="enso" created="201911120144" modified="201911120235" changecount="10">
+<pre>[[Timer|Timers]] [[Interrupt|Interrupts]] Enable [[Register|Timer.Registers]] at &quot;&quot;&quot;$DF46&quot;&quot;&quot;
+|!~DF46|!Name|!1 Enables interrupt for|
+|7|~TIER7|[[Timer 7|Timers]]|
+|6|~TIER6|[[Timer 6|Timers]]|
+|5|~TIER5|[[Timer 5|Timers]]|
+|4|~TIER4|[[Timer 4|Timers]]|
+|3|~TIER3|[[Timer 3|Timers]]|
+|2|~TIER2|[[Timer 2|Timers]]|
+|1|~TIER1|[[Timer 1|Timers]]|
+|0|~TIER0|[[Timer 0|Timers]]|
+</pre>
+</div>
+<div title="Timer Interrupt Flag Register" creator="enso" modifier="enso" created="201911120149" modified="201911120234" changecount="6">
+<pre>[[Timer|Timers]] [[Interrupt|Interrupts]] Flag [[Register|Timer.Registers]] at &quot;&quot;&quot;$DF44&quot;&quot;&quot;
+|!~DF44|!Name|!Interrupted by|
+|7|~TIFR7|[[Timer 7|Timers]]|
+|6|~TIFR6|[[Timer 6|Timers]]|
+|5|~TIFR5|[[Timer 5|Timers]]|
+|4|~TIFR4|[[Timer 4|Timers]]|
+|3|~TIFR3|[[Timer 3|Timers]]|
+|2|~TIFR2|[[Timer 2|Timers]]|
+|1|~TIFR1|[[Timer 1|Timers]]|
+|0|~TIFR0|[[Timer 0|Timers]]|
+</pre>
+</div>
+<div title="Timer.Control.Register" creator="enso" modifier="enso" created="201911120129" modified="201911120154" changecount="23">
+<pre>[[Timer|Timers]] Control [[Control Register|Control.Registers]] at &quot;&quot;&quot;$DF42&quot;&quot;&quot;
+|!~DF42|!Name|Function|||!1|!0|
+|7|TCR7|[[UART3|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
+|6|TCR6|[[UART2|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
+|5|TCR5|[[UART1|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
+|4|TCR4|[[UART0|UARTs]]|||[[Timer 4|Timers]]|[[Timer 3|Timers]]|
+|3|TCR3|Pulse Measurement on [[P62|Pins]]|!11|!10|!01|!00|
+|2|TCR2|~|Both Edges|Neg Edge|Pos Edge|Disable|
+|1|TCR1|[[Timer 4|Timers]] on [[P61|Pins]]|||Enable|Disable|
+|0|TCR0|[[Timer 4|Timers]] clock|||[[P60|Pins]]|[[FCLK|Clocks]]|
 </pre>
 </div>
 <div title="Timer.Registers" creator="enso" modifier="enso" created="201911130001" modified="201911130324" tags="Timer" changecount="4">
